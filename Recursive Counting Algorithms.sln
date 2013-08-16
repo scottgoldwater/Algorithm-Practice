@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursive Counting Algorithms", "Permutation\Recursive Counting Algorithms.csproj", "{2106BF6D-6157-4D6C-A230-70E64FABF431}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2106BF6D-6157-4D6C-A230-70E64FABF431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2106BF6D-6157-4D6C-A230-70E64FABF431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2106BF6D-6157-4D6C-A230-70E64FABF431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2106BF6D-6157-4D6C-A230-70E64FABF431}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
