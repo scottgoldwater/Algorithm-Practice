@@ -55,5 +55,32 @@ namespace Permutation
 
             return new string(stringArray);
         }
+
+        public static string CompressString(this string input)
+        {
+            StringBuilder output = new StringBuilder();
+            char[] inputArray = input.ToCharArray();
+            char current = inputArray[0];
+            int number = 0;
+
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                if (current == inputArray[i])
+                {
+                    number++;
+                }
+                else
+                {
+                    output.Append(string.Format("{0}{1}", number, current));
+                    number = 1;
+                    current = inputArray[i];
+                }
+                
+            }
+
+            output.Append(string.Format("{0}{1}", number, current));
+
+            return output.ToString();
+        }
     }
 }
