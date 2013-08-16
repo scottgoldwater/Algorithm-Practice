@@ -7,7 +7,7 @@ namespace Permutation
     /// <summary>
     /// Practice recursive algorithms for interviews
     /// </summary>
-    class Program
+    class Algorithms
     {
         static void Main()
         {
