@@ -11,7 +11,7 @@ namespace Permutation
     {
         static void Main()
         {
-            Console.WriteLine("abcdefg".BestReverse());
+            Console.WriteLine("AAACBBD".CompressString());
             Console.Read();
         }
 
