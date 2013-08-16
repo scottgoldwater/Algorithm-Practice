@@ -11,7 +11,8 @@ namespace Permutation
     {
         static void Main()
         {
-            PhoneInit("1234");
+            Console.WriteLine("abcdefg".BestReverse());
+            Console.Read();
         }
 
         /// <summary>
