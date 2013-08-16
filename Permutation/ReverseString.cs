@@ -82,5 +82,25 @@ namespace Permutation
 
             return output.ToString();
         }
+
+        public static string ReverseWordsInString(this string input)
+        {
+            string[] wordStrings = input.Split(' ');
+
+            for (int i = 0; i<wordStrings.Length;i++)
+            {
+                char[] wordArray = wordStrings[i].ToCharArray();
+                
+                for (int j = 0; j < wordArray.Length/2; j++)
+                {
+                    wordArray[j] ^= wordArray[wordArray.Length - 1-j];
+                    wordArray[wordArray.Length - 1-j] ^= wordArray[j];
+                    wordArray[j] ^= wordArray[wordArray.Length - 1-j];
+                }
+                wordStrings[i] = new string(wordArray);
+            }
+
+            return string.Join(" ", wordStrings);
+        }
     }
 }

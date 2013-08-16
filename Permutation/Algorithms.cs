@@ -11,7 +11,7 @@ namespace Permutation
     {
         static void Main()
         {
-            Console.WriteLine("AAACBBD".CompressString());
+            Console.WriteLine("This is a string".ReverseWordsInString());
             Console.Read();
         }
 
