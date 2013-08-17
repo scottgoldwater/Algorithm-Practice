@@ -139,6 +139,9 @@ namespace Permutation
         /// <remarks>Code that I couldn't produce during a Microsoft interview :(</remarks>
         public static int StringSearchAgain(string needle, string haystack)
         {
+            if(string.IsNullOrEmpty(needle) || string.IsNullOrEmpty(haystack))
+                throw new ArgumentNullException("Problem with args");
+
             int current = needle.Length;
             for (int i = 0; i < needle.Length; i++)
             {
@@ -156,6 +159,7 @@ namespace Permutation
                     i = 0;
                     current = needle.Length;
                 }
+                return -1;
             }
             return -1;
         }
