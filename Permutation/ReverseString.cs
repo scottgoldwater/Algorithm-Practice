@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -102,5 +103,64 @@ namespace Permutation
 
             return string.Join(" ", wordStrings);
         }
+
+        /// <summary>
+        /// Yet another StrStr implementation 
+        /// </summary>
+        /// <param name="subset">The subset.</param>
+        /// <param name="set">The set.</param>
+        /// <returns></returns>
+        public static bool StringSearch(string subset, string set)
+        {
+            for (int i = 0; i < set.Length; i++)
+            {
+                for (int j = 0; j < subset.Length && i+j < subset.Length; j++)
+                {
+                    if (subset[j] != set[i+j])
+                    {
+                        break;
+                    }
+                    
+                    if(j== subset.Length-1)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// strstr() implementation
+        /// </summary>
+        /// <param name="needle">The needle.</param>
+        /// <param name="haystack">The haystack.</param>
+        /// <returns>The location with the first instance of the substring</returns>
+        /// <remarks>Code that I couldn't produce during a Microsoft interview :(</remarks>
+        public static int StringSearchAgain(string needle, string haystack)
+        {
+            int current = needle.Length;
+            for (int i = 0; i < needle.Length; i++)
+            {
+                for (int j = 0; j < haystack.Length; j++)
+                {
+                    if (current == 0)
+                        return j-needle.Length;
+
+                    if (needle[i] == haystack[j])
+                    {
+                        ++i;
+                        current--;
+                        continue;
+                    }
+                    i = 0;
+                    current = needle.Length;
+                }
+            }
+            return -1;
+        }
+     
     }
+
+    
 }
