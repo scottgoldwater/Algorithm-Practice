@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursive Counting Algorithms", "Permutation\Recursive Counting Algorithms.csproj", "{2106BF6D-6157-4D6C-A230-70E64FABF431}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Algorithm Practice", "AlgorithmPractice\Algorithm Practice.csproj", "{2106BF6D-6157-4D6C-A230-70E64FABF431}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

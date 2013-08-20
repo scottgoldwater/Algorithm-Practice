@@ -11,7 +11,7 @@ namespace Permutation
     {
         static void Main()
         {
-            Console.WriteLine(ReverseString.StringSearchAgain("foo","aaafoddfoobar"));
+            PermInit("abc");
             Console.Read();
         }
 

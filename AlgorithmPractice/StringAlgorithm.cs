@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Permutation
 {
-    static class ReverseString
+    static class StringAlgorithm
     {
 
         /// <summary>
@@ -104,39 +104,8 @@ namespace Permutation
             return string.Join(" ", wordStrings);
         }
 
-        /// <summary>
-        /// Yet another StrStr implementation 
-        /// </summary>
-        /// <param name="subset">The subset.</param>
-        /// <param name="set">The set.</param>
-        /// <returns></returns>
-        public static bool StringSearch(string subset, string set)
-        {
-            for (int i = 0; i < set.Length; i++)
-            {
-                for (int j = 0; j < subset.Length && i+j < subset.Length; j++)
-                {
-                    if (subset[j] != set[i+j])
-                    {
-                        break;
-                    }
-                    
-                    if(j== subset.Length-1)
-                    {
-                        return true;
-                    }
-                }
-            }
-            return false;
-        }
 
-        /// <summary>
-        /// strstr() implementation
-        /// </summary>
-        /// <param name="needle">The needle.</param>
-        /// <param name="haystack">The haystack.</param>
-        /// <returns>The location with the first instance of the substring</returns>
-        /// <remarks>Code that I couldn't produce during a Microsoft interview :(</remarks>
+
         public static int StringSearchAgain(string needle, string haystack)
         {
             if(string.IsNullOrEmpty(needle) || string.IsNullOrEmpty(haystack))
@@ -163,8 +132,27 @@ namespace Permutation
             }
             return -1;
         }
-     
-    }
 
-    
+
+        public static bool SearchSearch(string needle, string haystack)
+        {
+            if(string.IsNullOrEmpty(needle) || string.IsNullOrEmpty(haystack))
+                throw new ArgumentNullException("");
+
+            int i = 0;
+            for (int j = 0; j < haystack.Length; j++)
+            {
+                if (i== needle.Length)
+                    return true;
+                    
+                if (haystack[j] == needle[i])
+                {
+                    i++;
+                    continue;
+                }
+                i = 0; 
+            }
+            return false;
+        }
+    }
 }
